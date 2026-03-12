@@ -5,6 +5,7 @@ justify-content: center;
 height: 100vh;
 }
 .container2{
+    text-align: center;
     width:30%;
     height: 30%;
     display: flex;
@@ -13,7 +14,7 @@ height: 100vh;
     justify-content: center;
     gap: 20px;
     background-color:#e7b673;
-    padding: 10vh;
+    padding: 15vh;
     border-radius: 20px;
 }
 
@@ -38,6 +39,10 @@ button:hover{
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+.buttons button{
+    width: 20vh;
+    padding: 2vh;
 }
 @media (max-width: 500px){
     .buttons{
