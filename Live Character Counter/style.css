@@ -1,0 +1,86 @@
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* page background */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    
+}
+
+/* outer container */
+.container1{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* card container */
+.container2{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:350px;
+    text-align:center;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.2);
+}
+
+/* label */
+label{
+    font-size:18px;
+    font-weight:600;
+    color:#333;
+}
+
+/* input box */
+input{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    transition:all 0.3s ease;
+}
+
+/* input focus effect */
+input:focus{
+    outline:none;
+    border-color:#4facfe;
+    box-shadow:0px 0px 8px rgba(79,172,254,0.5);
+}
+
+/* character counter */
+#charCount{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:500;
+    background:#4facfe;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+}
+
+/* responsive design */
+@media (max-width:500px){
+    .container2{
+        width:90%;
+        padding:30px;
+    }
+}
+
+.arima-font {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
