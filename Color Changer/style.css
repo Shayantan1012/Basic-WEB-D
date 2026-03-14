@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    
+}
+body button{
+    padding: 1vh;
+    width: 30vh;
+    height: 10vh;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: azure;
+    margin : 15px;
+}
+body button:hover{
+    background-color: azure;
+}
+.red_button{
+    background-color: red;
+}
+.green_button{
+    background-color: green;
+}
+.blue_button{
+    background-color: blue;
+}
+.body_red{
+    background: red;
+}
+.body_green{
+    background: green;
+}
+.body_blue{
+    background: blue;
+}
+
+.arima-font {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
