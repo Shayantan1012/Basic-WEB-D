@@ -13,6 +13,7 @@ body{
     
 }
 body button{
+    /* display: none; */
     padding: 1vh;
     width: 30vh;
     height: 10vh;
