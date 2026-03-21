@@ -172,6 +172,7 @@ body {
     /* Slider height adjust */
     .slider {
         height: 70vh;
+        margin-bottom: 50px;
     }
 
     .heading{
