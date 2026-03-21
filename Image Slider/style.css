@@ -1,0 +1,226 @@
+@font-face {
+    font-family: "DiazCinta";
+    src: url("fonts/Monalisa-K7aW7.otf") format("truetype");
+}
+
+
+
+/* ----------- BODY BACKGROUND ----------- */
+
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("Images/img_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heading {
+    font-size: 30px;
+    font-family: "DiazCinta", cursive;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    margin-bottom: 30vh;
+    position: relative;
+    z-index: 8;
+}
+
+/* ----------- SLIDER CONTAINER ----------- */
+.slider {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;  /* IMPORTANT */
+    margin-bottom: 100px;
+}
+
+/* ----------- IMAGE BOX (BORDER + BACKGROUND) ----------- */
+.image_box {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    padding: 10px;
+
+    /* 🔥 Gradient border effect */
+
+    background-image: url("Images/img_border.jpg");
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+
+    transition: 0.3s;
+
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* ----------- IMAGE INSIDE BOX ----------- */
+.image_box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+/* ----------- POSITIONING ----------- */
+.box1 {
+    left: 5%;
+    width: 60vh;
+    height: 60vh;
+    z-index: 2;
+}
+
+.box2 {
+    width: 70vh;
+    height: 70vh;
+    z-index: 3;
+}
+
+.box3 {
+    right: 5%;
+    width: 60vh;
+    height: 60vh;
+    z-index: 2;
+}
+
+/* ----------- DEPTH EFFECT ----------- */
+.box1, .box3 {
+    filter: brightness(0.8) blur(1px);
+}
+
+.box2 {
+    filter: brightness(1.1);
+}
+
+/* ----------- HOVER EFFECT ----------- */
+.image_box:hover {
+    transform: scale(1.05);
+}
+
+/* ----------- BUTTONS ----------- */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+.buttons button {
+    padding: 12px 18px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 100%; 
+    /* background: linear-gradient(135deg, #ff758c, #ff7eb3); */
+    background: transparent;
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+
+.buttons button:hover {
+    /* background-color: #555; */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);;
+    transition: scale(1.1);
+}
+
+#prev{
+    rotate: 90deg;
+}
+#next{
+    rotate: -90deg;
+}
+
+
+
+/* ----------- MOBILE RESPONSIVE ----------- */
+@media (max-width: 768px) {
+
+    /* Slider height adjust */
+    .slider {
+        height: 70vh;
+    }
+
+    .heading{
+        font-size: 24px;
+        margin-bottom: 5vh;
+    }
+
+    /* Stack images more compact */
+    .box1, .box3 {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .box2 {
+        width: 45vw;
+        height: 45vw;
+    }
+
+    /* Reduce side spacing */
+    .box1 {
+        left: 2%;
+    }
+
+    .box3 {
+        right: 2%;
+    }
+
+    /* Reduce blur for clarity */
+    .box1, .box3 {
+        filter: brightness(0.8);
+    }
+
+    /* Image border radius smaller */
+    .image_box {
+        border-radius: 15px;
+        padding: 6px;
+    }
+
+    .image_box img {
+        border-radius: 12px;
+    }
+
+    /* Buttons smaller */
+    .buttons button {
+        padding: 8px 12px;
+        font-size: 16px;
+        margin-bottom: 5vh;
+    }
+    .buttons {
+        margin-top: 5vh;
+    }
+}
