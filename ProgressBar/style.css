@@ -1,0 +1,321 @@
+@font-face {
+    font-family: "DiazCinta";
+    src: url("fonts/Monalisa-K7aW7.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "StylishCalligraphyDemo";
+    src: url("fonts/stylish-calligraphy-font/StylishCalligraphyDemo-XPZZ.ttf") format("truetype");
+}
+
+.fade_in {
+    opacity: 0;
+    animation: fadeOnly 1s ease forwards;
+}
+
+
+
+@keyframes fadeOnly {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.heart_container {
+    position: relative;
+    display: inline-block;
+}
+
+/* ❤️ Heart image */
+.love_icon {
+    width: 300px;
+    display: block;
+}
+
+/* 📝 Text on top */
+.progress_text {
+    font-family: "DiazCinta", cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+
+    pointer-events: none; /* allows clicking through text */
+}
+
+
+
+.progress_bar {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 25px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);   /* 🔥 glass effect */
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+
+}
+
+.progress_bar_internal {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: relative;
+
+    /* 💖 LOVE gradient */
+    background: linear-gradient(90deg, #ff4d6d, #ff85a1, #ffc2d1);
+
+    /* 💕 glow effect */
+    box-shadow: 
+        0 0 10px #ff85a1,
+        0 0 20px #ff4d6d,
+        0 0 30px #ff4d6d;
+
+    transition: width 0.3s ease-in-out;
+}
+
+.progress_bar_internal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+
+    animation: shine 2s infinite;
+}
+@keyframes shine {
+    100% {
+        left: 100%;
+    }
+}
+.progress_bar_internal {
+    position: relative;
+}
+
+.letter_icon {
+    position: absolute;
+    right: -20px;           /* 👈 pushes it slightly outside the fill */
+    top: 50%;
+    transform: translateY(-50%);  
+    width: 35px;
+    height: 35px;
+
+    /* ✨ glow effect */
+    filter: drop-shadow(0 0 5px #ff4d6d);
+
+    transition: right 0.3s ease;
+}
+/* Center content */
+.container {
+    text-align: center;
+    z-index: 2;
+}
+
+/* 📦 Image containers */
+.img_container {
+
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 5px;
+    background-image: url("assets/image_border.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 20px 50px rgba(0,0,0,0.6);
+
+
+
+}
+
+/* 🖼 Images inside */
+.img_container img {
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;          /* keeps image nicely cropped */
+}
+
+/* 📍 Positioning */
+.img1_container {
+    position: absolute;
+    right: 15%;      /* ✅ move right */
+    bottom: 10%;     /* ✅ move bottom */
+    transform: rotate(-25deg);
+    z-index: 5;
+}
+
+.img2_container {
+    position: absolute;
+    right: 1%;       /* slightly more right */
+    bottom: 20%;     /* a bit above */
+    transform: rotate(4deg);
+    z-index: 4;
+}
+
+/* 🌹 rose */
+.pink_rose {
+    position: absolute;
+    left: 5%;        /* ✅ moved to left */
+    bottom: 18%;     /* better placement */
+    width: 20%;
+    height: 80vh;
+    transform: rotate(30deg);
+}
+
+.my_feelings{
+    font-family: "StylishCalligraphyDemo", cursive;
+    color : white;
+    font-size: 20px;
+}
+.feelings_container{
+    width: 500px;
+    position: absolute;
+    left: 30%;
+    bottom: 40%;
+    z-index: 6;
+}
+.lower_text{
+    font-family: "DiazCinta", cursive;
+    color : white;
+    font-size: 40px;
+    position: absolute;
+    left: 20%;
+    bottom: 18%;
+    z-index: 6;
+    rotate: -10deg;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+
+    .love_icon {
+        width: 180px;
+    }
+
+    .progress_text {
+        font-size: 16px;
+    }
+
+    .progress_bar {
+        width: 250px;
+        height: 18px;
+    }
+
+    .letter_icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .img_container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .img1_container {
+        right: 10%;
+        bottom: 8%;
+        transform: rotate(-15deg);
+    }
+
+    .img2_container {
+        right: 2%;
+        bottom: 18%;
+        transform: rotate(5deg);
+    }
+
+    .pink_rose {
+        width: 35%;
+        height: auto;
+        left: 2%;
+        bottom: 10%;
+    }
+
+    .feelings_container {
+        width: 90%;
+        left: 5%;
+        bottom: 35%;
+    }
+
+    .my_feelings {
+        font-size: 14px;
+    }
+
+    .lower_text {
+        font-size: 20px;
+        left: 5%;
+        bottom: 10%;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+
+    .love_icon {
+        width: 220px;
+    }
+
+    .progress_bar {
+        width: 300px;
+    }
+
+    .img_container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .pink_rose {
+        width: 25%;
+        height: auto;
+    }
+
+    .feelings_container {
+        width: 70%;
+        left: 15%;
+    }
+
+    .lower_text {
+        font-size: 28px;
+    }
+}
