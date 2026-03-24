@@ -1,52 +1,3 @@
-// const progressBar = document.querySelector('.progress_bar_internal');
-// const love_icon = document.querySelector('.love_icon');
-// const pink_rose = document.querySelector('.pink_rose');
-// const img_container1 = document.querySelector('.img1_container');
-// const img_container2 = document.querySelector('.img2_container');
-// const heart_container = document.querySelector('.heart_container');
-// const container = document.querySelector('.container');
-// const my_feelings = document.querySelector('.feelings_container');
-// const lower_container = document.querySelector('.lower_text');
-
-// let value = 0;
-
-// container.style.display = 'none';
-// pink_rose.style.display = 'none';
-// img_container1.style.display = 'none';
-// img_container2.style.display = 'none';
-// heart_container.style.display = 'block';
-// my_feelings.style.display = 'none';
-// lower_container.style.display = 'none';
-
-// love_icon.addEventListener('click', () => {
-//     heart_container.style.display = 'none';
-//     container.style.display = 'block';
-// });
-
-// setInterval(() => {
-//     if (value < 100) {
-//         value += 1;
-//         progressBar.style.width = value + '%' ;
-//     }
-
-//     if(value === 100){
-//     lower_container.style.display = 'block';
-//     }
-//     else if(value === 25){
-//         pink_rose.style.display = 'block';
-//     }
-//     else if(value === 50){
-//         img_container1.style.display = 'flex';
-//         img_container2.style.display = 'flex';
-//     }
-//     else if(value === 75){
-//         my_feelings.style.display = 'block';
-//         container.style.display = 'none';
-//         heart_container.style.display = 'none';
-
-//     }
-// }, 100);
-
 const progressBar = document.querySelector('.progress_bar_internal');
 const love_icon = document.querySelector('.love_icon');
 const pink_rose = document.querySelector('.pink_rose');
@@ -117,4 +68,5 @@ function startProgress() {
     }, 100);
 }
 
+// Optional: Add fade-in animation via CSS
 
