@@ -250,28 +250,29 @@
     }
 
     .img1_container {
-        right: 10%;
-        bottom: 8%;
-        transform: rotate(-15deg);
+        right: 12%;
+        bottom: 18%;
+        transform: rotate(-25deg);
     }
 
     .img2_container {
-        right: 2%;
-        bottom: 18%;
-        transform: rotate(5deg);
+        right: 4%;
+        bottom: 30%;
+        transform: rotate(15deg);
     }
 
     .pink_rose {
         width: 35%;
         height: auto;
         left: 2%;
-        bottom: 10%;
+        bottom: 15%;
     }
 
     .feelings_container {
         width: 90%;
         left: 5%;
-        bottom: 35%;
+        bottom: 60%;
+
     }
 
     .my_feelings {
