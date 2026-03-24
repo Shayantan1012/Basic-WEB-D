@@ -267,9 +267,10 @@
 
     .pink_rose {
         width: 35%;
-        height: auto;
+        height: 40%;
         left: 2%;
         bottom: 15%;
+        rotate: -30deg;
     }
 
     .feelings_container {
